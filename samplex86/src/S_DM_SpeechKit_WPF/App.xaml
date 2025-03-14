@@ -1,0 +1,24 @@
+﻿<Application x:Class="S_SpeechAnywhereWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="LoginDialog.xaml">
+    <Application.Resources>
+        <!-- Add some application wide style defintions. These definitions should only affect UI elements in the integration, and not UI elements from the SDK. -->
+        <Color x:Key="ColorSchema-Button-RegularBorderBackground" >LightGray</Color>
+        <Color x:Key="ColorSchema-Text-RegularBackground">Transparent</Color>
+        <SolidColorBrush x:Key="ButtonRegularBorderBackground" Color="{DynamicResource ColorSchema-Button-RegularBorderBackground}"/>
+        <SolidColorBrush x:Key="TextRegularBackground" Color="{DynamicResource ColorSchema-Text-RegularBackground}"/>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{DynamicResource ButtonRegularBorderBackground}" />
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="Background" Value="{DynamicResource TextRegularBackground}" />
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource TextRegularBackground}"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Background" Value="{DynamicResource TextRegularBackground}"/>
+        </Style>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.Desktop,Danube.COM">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Deferred correction use case</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Deferred correction use case</h1>
+        <p>For more information on deferred correction, see:</p>
+        <ul>
+            <li>
+                <p><a href="DANUBE_CONCEPT_DEFERRED_CORRECTION.htm">Deferred correction concept</a>
+                </p>
+            </li>
+        </ul>
+        <h2>Prerequisites</h2>
+        <p>Document workflow support must be implemented. For more information, see: <a href="../DesktopUseCases/DANUBE_DOCUMENT_WORKFLOW_SUPPORT_DESKTOP.htm" data-mc-conditions="Danube.Desktop">Support functionality for document workflows</a>.</p>
+        <h2>Procedure</h2>
+        <h3>Initialize the session and configure the document mode</h3>
+        <ol>
+            <li value="1">Configure the service URL: <code>ISession.ServiceURL</code></li>
+            <li class="compact" value="2">Open a session: <code>ISession.Open(Document Mode)</code>:</li>
+        </ol>
+        <p class="compact2">Document mode for authors - <code>Frontend</code></p>
+        <p class="compact2">Document mode for transcriptionists - <code>Correctionist</code></p>
+        <p class="indent2">(The session can be kept open for the life cycle of the application and is user-specific.)</p>
+        <h3>Initialize the VuiController</h3>
+        <ol>
+            <li value="1">Create a new VuiController instance; a new instance should be used per document, don't reuse an instance.</li>
+            <li class="compact" value="2">Set the document field ID on the VuiController for each text control: <code>VuiController.SetDocumentFieldId</code></li>
+            <p>The same document field ID must be used for the same textbox when reopening the document.</p>
+            <li value="3">If you're reopening an existing document, restore document text into the text control.</li>
+            <li class="compact" value="4">Apply optional configurations:</li>
+            <p class="compact2">Set the language: <code>VuiController.Language</code></p>
+            <p class="indent2">Set the topic: <code>VuiController.Topic</code></p>
+            <li value="5">Open the VuiController: <code>VuiController.Open</code></li>
+        </ol>
+        <p class="indent2">For the deferred correction workflow, the VuiController must be opened with a unique document ID and document token per document.</p>
+        <p>The deferred correction workflow can now be used; when using a new document, follow the clean-up steps and repeat the initialization steps.</p>
+        <h3>Clean up the VuiController</h3>
+        <ol>
+            <li class="compact" value="1">Close the VuiController: <code>VuiController.Close</code></li>
+            <p class="compact2">To discard changes, call <code>Close</code> with an empty string as an argument.</p>
+            <p class="indent2">To keep changes, call <code>Close</code> with the document ID and the document state as arguments. Set the document state to <code>Corrected</code> once the author has reviewed the final text and signed it off. Set the document state to <code>Uncorrected</code> at all other times.</p>
+            <li value="2">Dispose the VuiController instance: <code>VuiController.Dispose</code></li>
+        </ol>
+        <h3>Clean up the session</h3>
+        <p>Call <code>Close</code> on the session: <code>ISession.Close</code></p>
+        <h2>Remarks</h2>
+        <ul>
+            <li>Documents are identified using the unique ID passed by the integration. The same ID must be used throughout the workflow of a document</li>
+            <li>Fields within the document are identified using a unique ID passed by the integration. The same ID should be used, for each field, throughout the workflow of a document.</li>
+            <li>Documents with multiple fields are supported.</li>
+            <li>When a document is reopened, the text must be restored by the integration.</li>
+            <li>It's recommended that your integration always provides a document ID when creating a document with workflow support. For more information, see: <a href="../DesktopUseCases/DANUBE_DOCUMENT_WORKFLOW_SUPPORT_DESKTOP.htm#DocumentID">Document IDs</a>.</li>
+            <li>A <a href="DANUBE_CONCEPT_DEFERRED_CORRECTION.htm#Document_tokens">document token</a> must be provided when using deferred correction.</li>
+            <li>
+                <p>Multiple authors recording into a document isn't supported; your integration must ensure this can't occur.</p>
+            </li>
+        </ul>
+        <h3>See also</h3>
+        <p><a href="DANUBE_CONCEPT_DEFERRED_CORRECTION.htm">Deferred correction concept</a>
+        </p>
+    </body>
+</html>

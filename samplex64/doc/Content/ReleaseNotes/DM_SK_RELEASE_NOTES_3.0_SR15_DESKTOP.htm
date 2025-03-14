@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Release History" data-mc-conditions="Danube.Desktop">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Dragon Medical SpeechKit 3.0 Service Release 15 (.NET edition)</title>
+        <style>*
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body
+{
+	background-color: #fff;
+	font-family: 'Microsoft Sans Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 80%;
+	line-height: 1.3;
+	margin: 1.5em;
+	mc-hyphenate: never;
+}
+
+@media print
+{
+	body
+	{
+		margin: 0;
+	}
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+table,
+pre,
+img.pageWidth
+{
+	margin-bottom: 0.8em;
+}
+
+a,
+a:link,
+a code,
+a span.path
+{
+	text-decoration: none;
+	color: #3366d0;
+}
+
+a:visited
+{
+	color: #3366d0;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+h1
+{
+	font-size: 2em;
+	color: #1A7CB6;
+	font-weight: normal;
+	page-break-before: always;
+	column-break-after: avoid;
+	mc-heading-level: 1;
+}
+
+h2
+{
+	margin-top: 1em;
+	border-bottom: 1px solid #1A7CB6;
+	font-size: 1.5em;
+	font-weight: normal;
+	color: #1A7CB6;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 2;
+}
+
+h3,
+p.TOC
+{
+	margin-top: 1em;
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #1A7CB6;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 0;
+}
+
+h4
+{
+	margin-top: 1em;
+	font-size: 1em;
+	font-weight: bold;
+	color: #1A7CB6;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 0;
+}
+
+h5
+{
+	margin-top: 1em;
+	font-size: 1em;
+	font-weight: bold;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 0;
+}
+
+h6
+{
+	margin-top: 0.5em;
+	font-size: 1em;
+	font-weight: bold;
+	border-bottom: 1px solid #289728;
+	color: #1A7CB6;
+	page-break-after: avoid;
+	column-break-after: avoid;
+	mc-heading-level: 0;
+}
+
+ul
+{
+	list-style-type: square;
+}
+
+ol,
+ul
+{
+	list-style-position: outside;
+	margin-left: 2.3em;
+}
+
+p.indent2
+{
+	margin-left: 2.3em;
+}
+
+p.indent3
+{
+	margin-left: 4.6em;
+}
+
+p.indent4
+{
+	margin-left: 6.9em;
+}
+
+p.compact,
+li.compact
+{
+	margin-bottom: 0.2em;
+}
+
+p.compact2
+{
+	margin-bottom: 0.2em;
+	margin-left: 2.3em;
+}
+
+p.compact3
+{
+	margin-bottom: 0.2em;
+	margin-left: 4.6em;
+}
+
+p.compact4
+{
+	margin-bottom: 0.2em;
+	margin-left: 6.9em;
+}
+
+.example p
+{
+	margin-bottom: 0.2em;
+}
+
+.example p.indent2,
+.example p.compact2
+{
+	margin-left: 0;
+	text-indent: 2.3em;
+}
+
+.example p.indent3,
+.example p.compact3
+{
+	margin-left: 0;
+	text-indent: 4.6em;
+}
+
+.example p.indent4,
+.example p.compact4
+{
+	margin-left: 0;
+	text-indent: 6.9em;
+}
+
+p.backToTop
+{
+	text-align: right;
+	font-weight: normal;
+}
+
+pre,
+code,
+code *
+{
+	font-family: Consolas, 'Andale Mono', monospace;
+	color: #444;
+}
+
+pre
+{
+	word-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+span.command
+{
+	font-weight: bold;
+	color: #289728;
+}
+
+span.important
+{
+	font-weight: bold;
+	color: #ff0000;
+}
+
+span.userInterface
+{
+	font-weight: bold;
+}
+
+span.path
+{
+	font-family: Verdana, sans-serif;
+	font-size: 0.9em;
+	color: #444;
+}
+
+span.selectedText
+{
+	background-color: #87cefa;
+}
+
+span.cursor
+{
+	color: #dc143c;
+	font-weight: bold;
+}
+
+.note
+{
+	border: 1px solid #289728;
+	padding: 0.5em 1em;
+}
+
+.example
+{
+	border: 1px solid #c9d1d7;
+	background-color: #f1f5f9;
+	padding: 0.5em 1em;
+}
+
+.warning
+{
+	border: 1px solid #289728;
+	background-color: #f0f3f7;
+	padding: 0.5em 1em;
+}
+
+.wide
+{
+	margin-bottom: 1.5em;
+}
+
+.columnBreak
+{
+	column-break-before: always;
+}
+
+table
+{
+	border-collapse: collapse;
+	page-break-inside: avoid;
+	font-size: 1em;
+}
+
+td,
+th
+{
+	border: 1px solid #c9d1d7;
+	text-align: left;
+	vertical-align: top;
+	padding: 0.4em;
+	page-break-inside: avoid;
+}
+
+th
+{
+	background-color: #f0f3f7;
+	color: #1A7CB6;
+	font-weight: bold;
+}
+
+hr
+{
+	color: #289728;
+	background-color: #289728;
+	height: 1px;
+	margin-bottom: 1.3em;
+	margin-top: 1.3em;
+}
+
+hr.alternative
+{
+	color: #e9e9e9;
+	background-color: #e9e9e9;
+}
+
+img.pageWidth
+{
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+@media print
+{
+	img.pageWidth
+	{
+		max-width: 15cm;
+	}
+}
+
+img.iconLarge
+{
+	max-height: 48px;
+	width: auto;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: text-bottom;
+}
+
+img.iconMedium
+{
+	max-height: 24px;
+	width: auto;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: text-bottom;
+}
+
+img.iconSmall
+{
+	max-height: 16px;
+	width: auto;
+	margin-left: 0.1em;
+	margin-right: 0.1em;
+	vertical-align: text-bottom;
+}
+
+</style>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Release Notes for Dragon Medical SpeechKit 3.0 Service Release 15 (.NET edition)</h1>
+        <p>Dragon Medical SpeechKit is a component of the Nuance Healthcare Development Platform. Rebranding the components is currently an ongoing activity. Dragon Medical SpeechKit was previously called 360 | SpeechAnywhere Services; please be aware that references to 360 | SpeechAnywhere Services 3.0 apply to this release.</p>
+        <h2>Solved issues in service release 15</h2>
+        <ul>
+            <li>Very short recordings are now recognized correctly. [DNB-7615]</li>
+            <li>Speech recognition no longer stops working when the form structure is changed and the VuiController activated/deactivated in a specific sequence. [DNB-7716]</li>
+            <li>When users record how they pronounce a word on the <span class="userInterface">Manage Vocabulary</span> page, the recording time limit of five seconds is now precisely enforced (requires Dragon Medical Server 3.1). [DNB-6007]</li>
+        </ul>
+        <p class="note"><b>Note:</b> For information on previous service releases, see: <a href="#Release">Service release history</a>.</p>
+        <h2>Important information</h2>
+        <ul>
+            <li>Please be aware that your application must be recompiled following this upgrade.</li>
+            <li>Dragon Medical SpeechKit 3.0 (.NET edition) is compatible with server versions 2.0, 2.1 and 3.0.</li>
+            <li>Dragon Medical Server 3.0 is compatible with client versions 2.0, 2.1 and 3.0.</li>
+            <li>Microsoft .NET Framework 4.5 must be installed on all workstations running .NET edition-based applications.</li>
+            <li>The .NET edition requires Microsoft Internet Explorer 11 to display the personalization and help window.</li>
+            <li>Information on the voice commands changed with each version of Dragon Medical SpeechKit is now available in the end user help.</li>
+            <li><code>Synchronize()</code> can no longer be used instead of <code>Initialize()</code>.</li>
+            <li>On the speech bar the colors for recording on/off have changed from red (on) - gray (off) to green (on) - red (off).</li>
+        </ul>
+        <h2>New in version 3.0</h2>
+        <h3>Manage Vocabulary (server version 3.0 required)</h3>
+        <h5>Dragon-based systems</h5>
+        <ul>
+            <li>Users can now search for words on the <span class="userInterface">Manage Vocabulary</span> page.</li>
+            <li>Users can now filter words on the <span class="userInterface">Manage Vocabulary</span> page based on the level (user/group/site) for which they were added.</li>
+            <li>New <span class="userInterface">Modify Word</span> screen: Users can now edit the spelling and pronunciation of words in their personal lexicon.</li>
+            <li>Users can now record how a word is pronounced.</li>
+            <li>New voice command to record how a word is pronounced: <span class="command">train word</span>.</li>
+        </ul>
+        <h3>Personal auto-texts (server version 3.0 required)</h3>
+        <h5>All systems</h5>
+        <ul>
+            <li>Users can now create auto-texts via the personalization and help window, <span class="userInterface">Manage Auto-texts</span> page. This new functionality is available to desktop users and mobile device users with a Dragon Medical One Desktop Application/Dragon Medical Direct license.</li>
+            <li>New voice command: <span class="command">make that an auto-text</span>.</li>
+        </ul>
+        <h3>Speech recognition (server version 3.0 required)</h3>
+        <h5>Dragon-based systems</h5>
+        <ul>
+            <li>New English, Dutch, Flemish and German voice commands to form compound words. English examples: <span class="command">compound</span>, <span class="command">compound that</span>, <span class="command">compound selection</span>.</li>
+            <li>New German voice commands to separate compound words: <span class="command">trenne das</span>, <span class="command">Auswahl trennen</span>, <span class="command">trenne Auswahl</span>.</li>
+            <li>Improved correction alternatives for Dutch, French and German in the correction menu.</li>
+            <li>Dragon Medical now intelligently identifies sentence separators; this means voice commands for selecting sentences and navigating to sentences work more reliably.</li>
+        </ul>
+        <h5>All systems</h5>
+        <ul>
+            <li>New voice commands to navigate text: <span class="command">go to beginning of sentence</span>, <span class="command">go to end of sentence</span>, <span class="command">go to beginning of paragraph</span>, <span class="command">go to end of paragraph</span>.</li>
+        </ul>
+        <h3>.NET edition</h3>
+        <ul>
+            <li>Dragon Medical SpeechKit performance has been improved in high latency situations.</li>
+        </ul>
+        <h3>On-premises systems (server version 3.0 required)</h3>
+        <ul>
+            <li>Dragon Medical systems now remove speech recognition data from the system file share when the data is no longer needed for improving the recognition quality.</li>
+        </ul>
+        <h2>Known issues</h2>
+        <ul>
+            <li>The automatic gain control (AGC) of the recording device or the device drivers/sound card drivers interferes with the Dragon Medical SpeechKit automatic audio adjustment feature. <b>Solution:</b> Disable the interfering AGCs.</li>
+            <li>The <code>SpokenText</code> parameter in the <code>CommandRecognized</code> event is empty in command mode. [DNB-328]</li>
+            <li><a href="https://msdn.microsoft.com/en-us/library/ms404279(v=vs.110).aspx">Shadow copying</a> is not supported for applications integrating the .Net SDK. Dragon Medical SpeechKit will not work if shadow copying is enabled. [DNB-5181]</li>
+        </ul>
+        <h2>Infrastructure</h2>
+        <h3>Infrastructure no longer supported</h3>
+        <ul>
+            <li>Version 3.0 client applications do not work with version 1.5 servers.</li>
+            <li>In version 3.0, the .NET edition requires Microsoft Internet Explorer 11  to display the personalization and help window.</li>
+            <li>In Dragon Medical Server 3.0 all version 1.4 client-based applications stop working.</li>
+        </ul>
+        <h3>Infrastructure changes planned for the next release</h3>
+        <ul>
+            <li>In Dragon Medical Server 3.1 all version 1.5 and 1.6 client-based applications will stop working.</li>
+            <li> All applications based on Dragon Medical SpeechKit 3.1 will stop working with 360 | SpeechAnywhere Services 1.6 servers.</li>
+        </ul>
+        <h2>System requirements - all clients*</h2>
+        <table>
+            <col />
+            <col />
+            <col />
+            <tr>
+                <th>&#160;</th>
+                <th>Recommended</th>
+                <th>Supported</th>
+            </tr>
+            <tr>
+                <th>Operating System</th>
+                <td>Windows 7</td>
+                <td>
+                    <p>Windows 7</p>
+                    <p>Windows 8</p>
+                    <p>Windows 8.1</p>
+                    <p>Windows 10 </p>
+                </td>
+            </tr>
+            <tr>
+                <th>.NET Framework</th>
+                <td>Microsoft .NET 4.5</td>
+                <td>Microsoft .NET 4.5</td>
+            </tr>
+            <tr>
+                <th>Microsoft Internet Explorer</th>
+                <td>11</td>
+                <td>11</td>
+            </tr>
+        </table>
+        <h3>Remarks</h3>
+        <ul>
+            <li>For Windows Server 2012, Internet Explorer 10 is supported because Internet Explorer 11 is not available.</li>
+        </ul>
+        <h2>System requirements - virtualized environments*</h2>
+        <table>
+            <col />
+            <col />
+            <col />
+            <tr>
+                <th>&#160;</th>
+                <th>Recommended</th>
+                <th>Supported</th>
+            </tr>
+            <tr>
+                <th>Nuance virtual extensions: Server</th>
+                <td>&#160;</td>
+                <td>
+                    <p>26.0.13.2</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Nuance virtual extensions:&#160;Client</th>
+                <td>26.0.13.2</td>
+                <td>25.0.22.1 - 26.0.13.2</td>
+            </tr>
+            <tr>
+                <th>VMware Horizon View</th>
+                <td>&#160;</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <th>VMware Client</th>
+                <td>&#160;</td>
+                <td>VMware Horizon Client 3.5.2 or higher</td>
+            </tr>
+            <tr>
+                <th>Citrix XenApp</th>
+                <td>&#160;</td>
+                <td>6.5, 7, 7.1, 7.5, 7.6, 7.9</td>
+            </tr>
+            <tr>
+                <th>Citrix XenDesktop</th>
+                <td>7</td>
+                <td>7, 7.1, 7.5, 7.6, 7.9</td>
+            </tr>
+            <tr>
+                <th>Citrix Client</th>
+                <td>&#160;</td>
+                <td>
+                    <p>Citrix Receiver 4.3 or higher</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Remote Desktop Services</th>
+                <td>Windows Server 2012 R2</td>
+                <td>
+                    <p>Windows Server 2008 R2</p>
+                    <p>Windows Server 2012 R2</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Remote Desktop Client</th>
+                <td>
+                    <p>Windows 7</p>
+                    <p>Windows 8.1</p>
+                </td>
+                <td>
+                    <p>Windows 7</p>
+                    <p>Windows 8</p>
+                    <p>Windows 8.1</p>
+                    <p>Windows 10 </p>
+                </td>
+            </tr>
+            <tr>
+                <th>Windows-based thin clients</th>
+                <td>&#160;</td>
+                <td>Windows Embedded Standard 7</td>
+            </tr>
+            <tr>
+                <th>Linux thin clients</th>
+                <td>Fujitsu Futro</td>
+                <td>
+                    <p>IGEL UD2 LX with firmware version UD LX 5.08.100</p>
+                    <p>IGEL UD3 LX with firmware version UD LX 5.08.100</p>
+                    <p>IGEL UD5 LX with firmware version UD LX 5.08.100</p>
+                    <p>Fujitsu Futro S450 with operating system version eLux RP 4.9.0</p>
+                    <p>Fujitsu Futro S520/S700/S720 with operating system version eLux RP 5.1</p>
+                    <p>HP t610 with operating system version eLux RP 4.4.0 (not tested with other eLux versions)</p>
+                </td>
+            </tr>
+        </table>
+        <h3>Remarks</h3>
+        <ul>
+            <li>For full support of virtualized environments, a custom audio channel must be deployed on the virtual server and client end point. For more information, see the Nuance virtual extensions package on the <a href="http://www.nuancehealthcaredeveloper.com">Nuance Healthcare Development Platform</a>.</li>
+            <li>
+                <p class="compact">The Nuance virtual extensions were previously released as the SpeechMagic Citrix Extension, the SpeechMagic WTS/RDS Extension and the SpeechMagic VMware View Extension. The installation procedure has changed as compared to previous versions:</p>
+                <p class="compact2">Each extension now has a separate installer for the server/virtual desktop component and the client component.</p>
+                <p class="compact2">The 64-bit and 32-bit versions of each server/virtual desktop component are now installed together.</p>
+            </li>
+            <li>
+                <p class="compact">Backward compatibility: The Nuance virtual extensions client and server components are designed to be backward compatible from the virtual server to the client end point. This means that you can run newer versions of the Nuance virtual extensions on the virtual server and they will work with older versions of the corresponding client-side components with the following caveats and recommendations:</p>
+                <p class="compact2">New server-side components are backward compatible with the corresponding client components released within the last year.</p>
+                <p class="compact2">This policy was introduced with Nuance virtual extensions version 25.0.22.1;&#160;it does not apply to earlier releases.</p>
+                <p class="compact2">New releases contain bug fixes and optimizations and it is recommended to install the latest version.</p>
+            </li>
+            <li>Citrix environments:&#160;For Microsoft Windows 10 clients Citrix Receiver 4.3 or higher is required.</li>
+            <li>Citrix environments: For Nuance PowerMic button support, install the Nuance PowerMic Citrix Extension on the Citrix client and server/virtual desktop where your application is hosted.</li>
+            <li>
+                <p class="compact">Microsoft RDS environments: For Nuance PowerMic button support, install the Nuance PowerMic RDS&#160;Client Extension on the Remote Desktop Client. Be aware of the following:</p>
+                <p class="compact2">The extension does not need to be installed on the server/virtual desktop; the required server binaries are already included in the application folder.</p>
+                <p class="compact2">The 64-bit and 32-bit versions of the Nuance PowerMic RDS Client Extension are installed together.</p>
+            </li>
+            <li>VMware Horizon View/RDSH environments:&#160;For Nuance PowerMic button support, install the Nuance PowerMic VMware&#160;Client Extension on the client PC. The extension does not need to be installed on the server/virtual desktop; the required server binaries are already included in the application folder.</li>
+            <li>For microphone button support, third-party drivers for Philips, Grundig and Olympus devices need to be provided by the device vendor and deployed both on the Citrix/RDS client and Citrix/RDS server.</li>
+            <li>Nuance RDS Audio Extension on Windows Server 2012: Microsoft hotfix KB2802311 must be installed. For more information, see the Microsoft Knowledge Base, <a href="https://support.microsoft.com/en-us/kb/2802311">article 2802311</a>. [PSP00069978]</li>
+            <li>
+                <p class="compact">Nuance RDS Audio Extension: UDP transport must be disabled on Remote Desktop Protocol (RDP) 8.1 and 10 clients. RDP 8.1 is preinstalled on Windows 8.1 and installed by Microsoft Update on Windows 7 and 8. RDP 10 is preinstalled on Windows 10. To disable UDP transport, add the following registry value to the Remote Desktop Client:</p>
+                <p class="compact2">Key: <span class="path">HKEY_LOCAL_MACHINE\Software\Microsoft\Terminal Server Client</span></p>
+                <p class="compact2">Value: <code>DisableUDPTransport = 1</code></p>
+            </li>
+            <li>Citrix XenDesktop: Third-party drivers for Olympus devices are not available at the time of the Dragon Medical SpeechKit 3.0 release. Contact your device vendor for updated drivers with XenDesktop support.</li>
+            <li>Philips SpeechMike on Linux thin clients in a Citrix environment: Session reconnect might not work. <b>Solution:</b> Make sure SpeechMike firmware version 2.54 or higher is installed.</li>
+            <li>VMware environments: For more information on system configuration, see the <a href="http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2068447">VMware Knowledge Base (Article ID 2068447)</a>.</li>
+            <li>VMware Virtual Audio on VMware virtual desktops running Microsoft Windows 8.1: Recording can sometimes stop with an internal audio error. This is due to an issue with VMware virtual machines and the xHCI USB host controller for Windows 8.1. <b>Solution:</b> Remove the xHCI controller from the virtual machine and add the EHCI+UHCI controller. For more information, see the VMware Knowledge Base, <a href="http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&amp;externalId=2057809">article 2057809</a>. [PSP00073153]</li>
+            <li>For more information on virtualized environments, see the <b>Docs &amp; Guidelines</b> folder of the Nuance virtual extensions package.</li>
+        </ul>
+        <h2>System requirements - edit controls*</h2>
+        <table>
+            <col />
+            <col />
+            <col />
+            <tr>
+                <th>&#160;</th>
+                <th>Recommended</th>
+                <th>Supported</th>
+            </tr>
+            <tr>
+                <th>TX Text Control .NET for Windows Presentation Framework</th>
+                <td>20</td>
+                <td> 19.0 to 20.0</td>
+            </tr>
+            <tr>
+                <th>TX Text Control .NET for Windows Forms</th>
+                <td>20</td>
+                <td> 19.0 to 22.0</td>
+            </tr>
+            <tr>
+                <th>
+                    <p> System.Windows.Forms.TextBoxBase</p>
+                    <p class="compact3" style="font-weight: normal;">System.Windows.Forms.TextBox</p>
+                    <p class="compact3" style="font-weight: normal;">System.Windows.Forms.MaskedTextBox</p>
+                    <p class="indent3" style="font-weight: normal;">System.Windows.Forms.RichTextBox</p>
+                </th>
+                <td>4.5</td>
+                <td>4.5</td>
+            </tr>
+            <tr>
+                <th> System.Windows.Controls.TextBox</th>
+                <td>4.5</td>
+                <td>4.5</td>
+            </tr>
+        </table>
+        <h3>*End-of-life: third party environments</h3>
+        <p>Support for third party environments is only valid as long as they are supported by the corresponding vendor and might be subject to other restrictions. Please contact Nuance Technical Support for details. For more information, see the documentation delivered with the third party product and supporting Nuance documentation.</p>
+        <p>When support by the vendor has stopped, Nuance will continue support if an issue is specific to the Nuance solution, within the limitations of the vendor’s and Nuance's end-of-life policy. This means that issues that are a combination of the vendor’s component and the Nuance solution cannot be supported.</p>
+        <h2>Dragon Medical SpeechKit product life cycle</h2>
+        <p>Nuance provides support throughout the life cycle of one version and point release. Please note that Nuance will not perform problem analysis after the end-of-life date stated here. If a Nuance-hosted system is used, Nuance cannot guarantee that an older version will continue working after the date stated here.</p>
+        <table>
+            <col style="width: 150px;" />
+            <col style="width: 105px;" />
+            <col style="width: 105px;" />
+            <col style="width: 105px;" />
+            <col style="width: 105px;" />
+            <col style="width: 105px;" />
+            <col style="width: 105px;" />
+            <tr>
+                <th>.NET edition version</th>
+                <th>1.4</th>
+                <th>1.5</th>
+                <th>1.6</th>
+                <th>2.0</th>
+                <th>2.1</th>
+                <th>3.0</th>
+            </tr>
+            <tr>
+                <th>End-of-life</th>
+                <td>2014-06-14</td>
+                <td>2015-02-14</td>
+                <td>2015-07-25</td>
+                <td>2016-06-30</td>
+                <td>2016-11-04</td>
+                <td>2017-05-10</td>
+            </tr>
+        </table>
+        <h2><a name="Release"></a>Service release history</h2>
+        <h3>Solved issues in service release 2</h3>
+        <ul>
+            <li>The application no longer stops responding when the VUIController is closed at the same time as the start of a new utterance. [DNB-6290]</li>
+            <li><code>ControlDeviceEventReceived</code> callbacks are now invoked on the session callback thread. [DNB-6464]</li>
+            <li>The user no longer has to click a field twice to set the keyboard focus when a different application had the focus. [DNB-6620]</li>
+            <li>In Citrix environments, a black rectangle no longer stays on the screen after an error message has been displayed. [DNB-6276]</li>
+            <li>Nuance PowerMic III: Applications now display the correct device name when the PowerMic III is connected (PowerMic III is still identified as PowerMic II by the operating system). [CAVE-847]</li>
+        </ul>
+        <h3>New in version 3.0 service release 2</h3>
+        <ul>
+            <li>Nuance PowerMic button controls are now supported in Microsoft RDS environments.</li>
+        </ul>
+        <h3>Solved issues in service release 7</h3>
+        <ul>
+            <li>Error recovery and support for load balancing have been improved. [DNB-6889]</li>
+            <li>After a session is closed and recording is no longer possible, the Nuance flame is no longer displayed in speech-enabled fields. [DNB-6673]</li>
+            <li>The application no longer stops unexpectedly during initialization with the latest .NET Framework version. [DNB-6976]</li>
+        </ul>
+        <h3>New in version 3.0 service release 7</h3>
+        <ul>
+            <li>
+                <p>360 | SpeechAnywhere Services client editions are now called Dragon Medical SpeechKit. [DNB-5670]</p>
+            </li>
+            <li>The speech recognition on/off icons now differ in both color and shape to support people with color vision deficiency. [DNB-6458]</li>
+            <li>The <span class="userInterface">Record</span> button on a control device is now synchronized with the <span class="userInterface">Record</span> button on the user interface. [DNB-6758]</li>
+        </ul>
+        <h3>Solved issues in service release 12</h3>
+        <ul>
+            <li>Changing the values of a set of application-defined placeholders (leaving the IDs and labels unchanged) via <code>AssignCommandPlaceholders()</code> no longer causes the application to stop unexpectedly. [DNB-7414]</li>
+            <li>Adding an application command to an existing command set via <code>CreateCommand()</code> now works correctly; the new command is no longer ignored. [DNB-7451]</li>
+            <li>Improved speech recognition if a user is dictating very quietly. [CAVE-857]</li>
+        </ul>
+        <h3>New in version 3.0 service release 12</h3>
+        <ul>
+            <li>The error notification has a new look. [DNB-6623]</li>
+            <li>The sample projects are now targeted for Visual Studio 2015. [DNB-5603]</li>
+            <li>Support for VMware Horizon View published applications (RDSH). [CAVE-252]</li>
+        </ul>
+    </body>
+</html>

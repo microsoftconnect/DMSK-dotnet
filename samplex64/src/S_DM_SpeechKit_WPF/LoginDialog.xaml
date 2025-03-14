@@ -1,0 +1,11 @@
+﻿<Window x:Class="S_SpeechAnywhereWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="265.224" Width="229.477">
+    <Grid Margin="0,0,2,-1.493">
+        <Label Content="User name:" HorizontalAlignment="Left" Margin="31.82,32.208,0,0" VerticalAlignment="Top" Width="155.822"/>
+        <TextBox x:Name="userTextBox" HorizontalAlignment="Left" Height="23" Margin="31.82,63.168,0,0" TextWrapping="Wrap" Text="myuser" VerticalAlignment="Top" Width="155.822" RenderTransformOrigin="0.174,0.86"/>
+        <Button x:Name="createReportButton" Content="Create report" HorizontalAlignment="Left" Margin="31.82,120.268,0,0" VerticalAlignment="Top" Width="155.822" Click="CreateReportButton_Click"/>
+
+    </Grid>
+</Window>

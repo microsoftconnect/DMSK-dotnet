@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Release History" data-mc-conditions="Danube.Desktop">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>360 | SpeechAnywhere Services 1.3 Service Release 15</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Release Notes - 360 | SpeechAnywhere Services 1.3 Service Release 15</h1>
+        <p>This is a service release for 360 | SpeechAnywhere Services .NET edition.</p>
+        <p>This service release is cumulative and contains all changes to previous SAS .NET edition service releases.</p>
+        <h2>New features</h2>
+        <p>Linux thin clients are now supported. For more information, see the readme delivered with the Linux package.</p>
+        <h2>Solved issues</h2>
+        <p>The application no longer crashes if the user tries to start the Audio Wizard while recording is running.</p>
+        <p>The first utterance at the beginning of a new VUIForm is now always recognized properly.</p>
+        <p>If you change from one recording device to another and then return to the first recording device, 360 | SpeechAnywhere Services no longer stops responding.</p>
+        <h2>Previous service release information</h2>
+        <h3>Service release 8</h3>
+        <p>In cases of high workstation CPU load or faulty audio devices, recording sometimes stopped but the user was not notified.</p>
+        <p>In a Citrix/WTS environment with an unreliable network connection, recording sometimes stopped but the user was not notified.</p>
+        <p>Users sometimes experienced a delay of up to 5 minutes which resulted in a loss of connectivity and loss of parts of the dictation; this was due to a Microsoft issue in the networking stack (for more information, see: <a href="http://support.microsoft.com/kb/976816">http://support.microsoft.com/kb/976816</a>).</p>
+        <h3>Service release 2</h3>
+        <p>The system  sometimes stopped processing sound. The system now reliably processes sound and returns the corresponding recognized text.</p>
+        <p>Windows Terminal Server is now supported; the SpeechMagic WTS Extension must be installed.</p>
+        <p>The Voice Activity Detection (VAD) algorithm has been improved.</p>
+        <p>Active command sets can now be changed when the system is listening</p>
+        <p>If you have defined application commands with more than one display string all are now displayed on the <b>What You Can Say</b> page.</p>
+        <h2>Known issues</h2>
+        <p>Occasionally the connection to the USB recording device is lost and cannot be re-established. Workaround: plug the device into another USB port. </p>
+        <p>In hosted systems the first 2 utterances of a first time user are not reliably recognized. </p>
+        <p>In on-premises systems the <code>SpokenText</code> parameter of <code>CommandRecognized</code> events is always empty. </p>
+        <h2>System requirements</h2>
+        <table id="systemRequirements">
+            <tr>
+                <th>
+                </th>
+                <th>Recommended</th>
+                <th>Supported</th>
+            </tr>
+            <tr>
+                <th>Operating System</th>
+                <td>Windows 7</td>
+                <td>Windows XP<BR />Windows 7<BR />Windows 8</td>
+            </tr>
+            <tr>
+                <th>.Net Framework</th>
+                <td>Microsoft .Net 3.5 SP1</td>
+                <td>Microsoft .Net 3.5 SP1 and higher</td>
+            </tr>
+        </table>
+    </body>
+</html>

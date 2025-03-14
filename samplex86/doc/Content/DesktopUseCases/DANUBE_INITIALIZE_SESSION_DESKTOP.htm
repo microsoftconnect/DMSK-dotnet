@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Use Cases" data-mc-conditions="Danube.Desktop">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>
+			Speech recognition session initialization
+		</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor29"></a>Initializing a speech recognition session</h1>
+        <p class="warning"><span class="important">Important:</span> If you're deploying <span class="mc-variable DocLoc.DM_Server variable">Dragon Medical Server</span> at your site (and not hosted by Nuance), make sure to <a href="DANUBE_CONFIGURE_ONPREMISE_DESKTOP.htm">configure <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> for on-premises deployment</a> before initializing a speech recognition session.</p>
+        <h2>Procedure</h2>
+        <p>When a user wants to initiate a speech recognition session via your app, do the following:</p>
+        <ol>
+            <li value="1">Use the static property <code>Session.SharedSession</code> to access the singleton session object.</li>
+            <li value="2">Call <code>Open()</code> on the shared session object to open the session. For example:</li>
+            <p><code>Session.SharedSession.Open("someUserID", "&lt;your organization token&gt;", "&lt;your partner GUID&gt;", "yourApplicationName")</code>
+            </p>
+            <p>The user's speech profile is retrieved by the <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> infrastructure and a license check is performed.</p>
+            <p><b>Note:</b> <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> uses the user name for license verification and for speech profile assignment. You can use your app's user login name for <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> but <span class="mc-variable DocLoc.DM_SK variable">Dragon Medical SpeechKit</span> doesn't provide any kind of user-specific password check and thus relies on your app for user authentication.</p>
+            <p>The organization token is an organization-wide revocable password and should be treated as such.</p>
+            <li value="3">Use the <code>Nuance.SpeechAnywhere.WindowsForms.VuiController</code> or <code>Nuance.SpeechAnywhere.WPF.VuiController </code>class to activate speech recognition (see: <a href="DANUBE_SPEECH_ENABLE_DESKTOP.htm">Speech-enabling your app</a>).</li>
+        </ol>
+        <h2>Remarks</h2>
+        <ul>
+            <li>User names and app names can have a maximum of 75 characters.</li>
+            <li>The app name can't consist of only numbers.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Release History" data-mc-conditions="Danube.Desktop">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>360 | SpeechAnywhere Services 1.4 Service Release 13 (.NET edition)</title>
+        <link href="../Resources/Stylesheets/DocLoc.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/purify.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <h1>Release Notes for 360 | SpeechAnywhere Services 1.4 Service Release 13 (.NET edition)</h1>
+        <h2>Solved issues</h2>
+        <p>A restriction caused by a known issue in .NET Framework 4.0: <a href="http://social.msdn.microsoft.com/Forums/vstudio/en-US/dd1a8e1b-a051-474d-8552-f8c311fa0f9c/threadcurrentprincipal-corrupts-current-synchronizationcontext">Thread.CurrentPrincipal corrupts current SynchronizationContext</a> is documented in the Technical restrictions topic of the online help. [PSP00069749]</p>
+        <p>In very rare circumstances an error message popped up during recording; recording would stop working and the application had to be restarted. This no longer happens. [PSP00070896]</p>
+        <h2>Solved issues in service release 12</h2>
+        <p>When the user records over multiple distinct pieces of existing text in a high-latency situation, the new text is now inserted in the correct place. To resolve this issue service release 12 must also be deployed on the SAS Server. [PSP00070794, PSP00070802]</p>
+        <p>In a Windows Presentation Foundation form, the cursor is now correctly positioned when the user says <span class="command">new line</span>/<span class="command">new paragraph</span> after the cursor has been manually moved. [PSP00070759]</p>
+        <p>The application no longer shuts down unexpectedly when a speech-enabled form is closed immediately after opening it. [PSP00070803]</p>
+        <p>The application no longer stops responding when it is resized quickly. [PSP00070803]</p>
+        <h2>Solved issues in service release 8</h2>
+        <p>When the audio input is too loud the volume meter now correctly displays feedback in red. [PSP00069441]</p>
+        <p>In a Windows Presentation&#160;Foundation application, the <code>VuiController</code> now always initializes correctly. [PSP00069848]</p>
+        <p>The .NET SDK no longer crashes when a VUI&#160;form is reinitialized. [PSP00070400]</p>
+        <p>The speech bar is now always visible when your application is set as 'always on top'. [PSP00069203]</p>
+        <h2>Solved issues in service release 1</h2>
+        <p>When recording is started the first 500 ms of audio is no longer lost. [PSP00069214]</p>
+        <h2>Important information</h2>
+        <ul style="list-style-type: square;">
+            <li>360 | SpeechAnywhere Services 1.4 Server is compatible with client versions 1.2 and 1.3.</li>
+        </ul>
+        <ul style="list-style-type: square;">
+            <li>SAS will work on Microsoft Windows XP, however please be aware that newer operating systems are recommended due to the Microsoft support policy.</li>
+        </ul>
+        <ul style="list-style-type: square;">
+            <li>The <span class="command">delete field</span> voice command has been removed.</li>
+        </ul>
+        <ul style="list-style-type: square;">
+            <li>In SAS "license GUID" has changed to "organization token" and in NMC "customer token" has changed to "organization token".</li>
+        </ul>
+        <h2>Known issues</h2>
+        <ul style="list-style-type: square;">
+            <li>The automatic gain control (AGC) of the recording device or the device drivers/sound card drivers interferes with the SAS automatic audio adjustment feature. Solution: disable the interfering AGCs.</li>
+            <li>The <code>SpokenText</code> parameter in the <code>CommandRecognized</code> event is empty in command mode. [PSP00062085]</li>
+        </ul>
+        <h2>Infrastructure no longer supported</h2>
+        <ul style="list-style-type: square;">
+            <li>Version 1.0 client-based applications will stop working.</li>
+        </ul>
+        <h2>Infrastructure changes planned for the next release</h2>
+        <ul style="list-style-type: square;">
+            <li>In 360 | SpeechAnywhere Services 1.5 all version 1.1 client-based applications will stop working. </li>
+        </ul>
+        <h2>Infrastructure changes planned for future releases</h2>
+        <ul style="list-style-type: square;">
+            <li>In 360 | SpeechAnywhere Services 1.6 all Microsoft .Net 3.5-based applications will stop working. The minimum requirement will be Microsoft .Net 4.0.</li>
+        </ul>
+        <h2>System requirements</h2>
+        <table id="systemRequirements">
+            <tr>
+                <th>
+                </th>
+                <th>Recommended</th>
+                <th>Supported</th>
+            </tr>
+            <tr>
+                <th>Operating System</th>
+                <td>Windows 7</td>
+                <td>Windows XP<BR />Windows 7<BR />Windows 8</td>
+            </tr>
+            <tr>
+                <th>.Net Framework</th>
+                <td>Microsoft .Net 3.5 SP1</td>
+                <td>Microsoft .Net 3.5 SP1 and higher</td>
+            </tr>
+        </table>
+    </body>
+</html>

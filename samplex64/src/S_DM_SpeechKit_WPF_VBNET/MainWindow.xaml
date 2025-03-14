@@ -1,0 +1,15 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="388" Width="525">
+    <Grid>
+        <Label Content="User Name:" HorizontalAlignment="Left" Height="23" Margin="20,29,0,0" VerticalAlignment="Top" Width="71"/>
+        <Button x:Name="OpenSessionBtn" Content="Open Session and VuiController" HorizontalAlignment="Left" Height="29" Margin="288,26,0,0" VerticalAlignment="Top" Width="192"/>
+        <TextBox x:Name="UserNameField" HorizontalAlignment="Left" Height="23" Margin="105,29,0,0" Text="" VerticalAlignment="Top" Width="154" MaxLines="1" MaxLength="50"/>
+        <Label Content="History" HorizontalAlignment="Left" Height="27" Margin="20,67,0,0" VerticalAlignment="Top" Width="183"/>
+        <TextBox x:Name="HistoryTBox" HorizontalAlignment="Left" Height="100" Margin="20,99,0,0" VerticalAlignment="Top" Width="460" ToolTip="Say &quot;go to history&quot; to navigate to this field" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
+        <TextBox x:Name="FindingsTBox" HorizontalAlignment="Left" Height="103" Margin="20,235,0,0" Text="" VerticalAlignment="Top" Width="460" ToolTip="Say &quot;go to findings&quot; to navigate to this field" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
+        <Label Content="Findings" HorizontalAlignment="Left" Margin="20,204,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
