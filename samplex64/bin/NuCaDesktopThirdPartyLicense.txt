@@ -1,0 +1,60 @@
+Speex Codec (libspeex)
+
+https://www.xiph.org/licenses/bsd/speex/
+
+Speex is part of the GNU Project and is available under the revised BSD license.
+
+© 2002-2003, Jean-Marc Valin/Xiph.Org Foundation
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+Neither the name of the Xiph.org Foundation nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----------------------------------------------------------------------------------------------------------------------------------
+Speex Codec (NSpeex)
+
+https://opensource.org/licenses/BSD-3-Clause
+
+The 3-Clause BSD License
+
+SPDX short identifier: BSD-3-Clause
+
+Copyright (c) 2010, Christoph Fröschl
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----------------------------------------------------------------------------------------------------------------------------------
+Copyright (c) 2024 by Speech Processing Solution GmbH. All rights reserved.
+
+SpeechMike is a registered trademark of Speech Processing Solutions GmbH.
+Philips and the Philips shield emblem are registered trademarks of Koninklijke Philips N.V. and are used under license.
+All trademarks are the property of their respective owners.
+
+This software is licensed free of charge.
+Permission to distribute this software in binary form is hereby granted without a fee. 
+
+This software is provided 'as is' and without any expressed or implied warranties, including, but not limited to,
+the implied warranties of merchantibility and fitness for a particular purpose.
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL SPS, ITS SUPPLIERS AND/OR THE OWNERS OF THE RIGHTS IN THE SOFTWARE PRODUCT BE LIABLE FOR ANY INDIRECT,
+INCIDENTAL, CONSEQUENTIAL, SPECIAL, PUNITIVE, OR OTHER DAMAGES WHATSOEVER, IN CONNECTION WITH OR ARISING OUT OF THE USE, MISUSE OR INABILITY TO USE THE SOFTWARE PRODUCT
+(INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS REVENUE, PROFITS, USE, DATA, COSTS OF PROCURING SUBSTITUTE GOODS OR SERVICES,  OR OTHER ECONOMIC ADVANTAGE),
+HOWEVER SUCH DAMAGES ARISE, WHETHER FOR BREACH OF CONTRACT, NEGLIGENCE OR IN TORT, EVEN IF SPS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+IN NO EVENT SHALL SPS’ AND ITS SUPPLIERS’ LIABILITY TO YOU HEREUNDER, WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE) OR OTHERWISE,
+EXCEED THE PRICE ACTUALLY PAID BY YOU FOR THE SOFTWARE PRODUCT.
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------

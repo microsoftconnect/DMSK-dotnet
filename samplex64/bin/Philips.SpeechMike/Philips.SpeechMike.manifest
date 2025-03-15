@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+  <assemblyIdentity
+     processorArchitecture="amd64"
+     version="4.7.471.20"
+     type="win32"
+     name="Philips.SpeechMike">
+    </assemblyIdentity>
+    
+   <file name="XPSPLOG.dll" hashalg="SHA1"/> 
+   <file name="SpMikeCtrl.dll" hashalg="SHA1">
+    <comClass
+      threadingModel="Apartment"
+      clsid="{4A0948DA-2C0A-4995-9679-4C609B2E3F01}"
+      tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+      description="BarcodeKeyboardSettings Class">
+    </comClass>
+    <comClass
+      threadingModel="Apartment"
+      clsid="{8A265D08-85DE-44E7-8D57-E573127B7868}" 
+      tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+      description="SpmDeviceInfo Class">
+    </comClass>
+    <comClass
+      threadingModel="Apartment"
+      clsid="{FBED5363-D5D0-450F-9C9D-41B27A52C4D6}"
+      tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+      description="SpmDeviceCapabilities Class">
+    </comClass>
+    <comClass
+      threadingModel="Apartment"
+      clsid="{90F94B59-B804-40C3-B4D8-11A84114DD4B}"
+      tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+      description="FirmwareData Class">
+    </comClass>
+    <comClass
+      threadingModel="Apartment"
+      clsid="{4A078FEC-41D7-4DC4-9C66-3BC9ADFE8B8A}"
+      tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+      description="SpmDeviceConfiguration Class">
+    </comClass>
+     <comClass
+      threadingModel="Apartment"
+      clsid="{AAA44754-CC81-4692-91AF-7064E58EB22A}"
+      tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+      description="SpeechMikeControl Class">
+    </comClass>
+    <typelib
+      tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+      resourceid="1"
+      version="1.0"
+      helpdir=""
+      flags="HASDISKIMAGE">
+    </typelib>
+  </file>
+  <comInterfaceExternalProxyStub
+    name="IBarcodeKeyboardSettings"
+    iid="{35EA0B74-5BC4-11DC-8314-0800200C9A66}"
+    tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}">
+  </comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub
+    name="ISpmDeviceInfo"
+    iid="{EF78C5B2-03B7-48C3-8F9A-26AF41A6BCC1}"
+    tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}">
+  </comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub
+    name="ISpmDeviceCapabilities"
+    iid="{761C6DFC-5FE7-4F2E-8DCB-24EFE3749207}"
+    tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}">
+  </comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub
+    name="IFirmwareData"
+    iid="{28E46516-6327-4B35-B4C0-D0D39E99812B}"
+    tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}">
+  </comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub
+    name="ISpmDeviceConfiguration"
+    iid="{4EF5A22A-BEEB-406C-ACD2-3E10D7D63B55}" 
+    tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}">
+  </comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub
+    name="ISpeechMikeControl"
+    iid="{D153FC68-6086-4AC4-BB4D-B2E042988A41}"
+    tlbid="{90D8C17A-63DC-489C-9742-0EAA2F48D236}"
+    proxyStubClsid32="{00020424-0000-0000-C000-000000000046}">
+  </comInterfaceExternalProxyStub>
+</assembly>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+<assemblyIdentity processorArchitecture="amd64" version="124.4.324.0" type="win32" name="Nuance.PowerMic"></assemblyIdentity>
+<file name="Pmlog.dll" hashalg="SHA1">
+</file>
+<file name="PowermicHid.dll" hashalg="SHA1">
+  <comClass clsid="{E376302C-56DF-4F22-B951-6E7BA7C61C72}" tlbid="{E376302C-56DF-4F22-B951-6E7BA7C61C69}" description="HIDManager Class" threadingModel="Apartment" progid="Powermic.HIDManager">
+    <progid>Powermic.HIDManager.1</progid>
+  </comClass>
+  <comClass clsid="{E376302C-56DF-4F22-B951-6E7BA7C61C73}" tlbid="{E376302C-56DF-4F22-B951-6E7BA7C61C69}" description="HIDDevice Class"></comClass>
+  <typelib tlbid="{E376302C-56DF-4F22-B951-6E7BA7C61C69}" version="1.0" helpdir="" flags="HASDISKIMAGE"></typelib>
+</file>
+<file name="PowermicVcSrv.dll" hashalg="SHA1">
+  <comClass clsid="{542322BD-4125-4CAF-AAB8-3041E7E04203}" tlbid="{542322BD-4125-4CAF-AAB8-3041E7E04201}" description="CxHIDManager Class" threadingModel="Apartment" progid="Powermic.CxHIDManager">
+    <progid>Powermic.CxHIDManager.1</progid>
+  </comClass>
+  <comClass clsid="{542322BD-4125-4CAF-AAB8-3041E7E04202}" tlbid="{542322BD-4125-4CAF-AAB8-3041E7E04201}" description="CxHIDDevice Class"></comClass>
+  <typelib tlbid="{542322BD-4125-4CAF-AAB8-3041E7E04201}" version="1.0" helpdir="" flags="HASDISKIMAGE"></typelib>
+</file>
+<file name="PowermicCtrl.dll" hashalg="SHA1">
+  <comClass clsid="{9EF6F4F7-FF24-45DA-88CB-7C9659903136}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" description="USBDeviceMgr Class" threadingModel="Apartment" progid="Powermic.USBDeviceMgr">
+    <progid>Powermic.USBDeviceMgr.1</progid>
+  </comClass>
+  <comClass clsid="{9EF6F4F7-FF24-45DA-88CB-7C9659903137}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" description="VecFootPedal  Class"></comClass>
+  <comClass clsid="{9EF6F4F7-FF24-45DA-88CB-7C9659903138}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" description="PowerMic2Obj Class"></comClass>
+  <typelib tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" version="1.0" helpdir="" flags="HASDISKIMAGE"></typelib>
+</file>
+  <comInterfaceExternalProxyStub name="IHIDManager" iid="{E376302C-56DF-4F22-B951-6E7BA7C61C70}" tlbid="{E376302C-56DF-4F22-B951-6E7BA7C61C69}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="IHidManagerNotifySink" iid="{E376302C-56DF-4F22-B951-6E7BA7C61C67}" tlbid="{E376302C-56DF-4F22-B951-6E7BA7C61C69}" proxyStubClsid32="{E376302C-56DF-4F22-B951-6E7BA7C61C67}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="IHIDDevice" iid="{E376302C-56DF-4F22-B951-6E7BA7C61C71}" tlbid="{E376302C-56DF-4F22-B951-6E7BA7C61C69}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="IHidDeviceNotifySink" iid="{E376302C-56DF-4F22-B951-6E7BA7C61C68}" tlbid="{E376302C-56DF-4F22-B951-6E7BA7C61C69}" proxyStubClsid32="{E376302C-56DF-4F22-B951-6E7BA7C61C68}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="IUSBDeviceMgr" iid="{9EF6F4F7-FF24-45DA-88CB-7C9659903134}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="IUSBDevice" iid="{9EF6F4F7-FF24-45DA-88CB-7C9659903133}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="IUSBDeviceAttr" iid="{82438D8A-F4C2-4580-A4F1-8F9084A3B7B3}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="_IUSBDeviceMgrEvents" iid="{9EF6F4F7-FF24-45DA-88CB-7C9659903132}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="IVecFootPedal" iid="{82438D8A-F4C2-4580-A4F1-8F9084A3B7B7}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="_IVecFootPedalEvents" iid="{82438D8A-F4C2-4580-A4F1-8F9084A3B7B6}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="IPowerMicII" iid="{82438D8A-F4C2-4580-A4F1-8F9084A3B7B5}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="_IPowerMicIIEvents" iid="{82438D8A-F4C2-4580-A4F1-8F9084A3B7B4}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+  <comInterfaceExternalProxyStub name="IPowerMicIIEx" iid="{82438D8A-F4C2-4580-A4F1-8F9084A3B7B8}" tlbid="{9EF6F4F7-FF24-45DA-88CB-7C9659903135}" proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"></comInterfaceExternalProxyStub>
+</assembly>
