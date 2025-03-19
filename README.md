@@ -4,7 +4,7 @@ See the following pages for more information:
 
 [Setting up Dragon Medical SpeechKit](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/net-sdk/setup)
 
-cd [Getting Started with Dragon Medical SpeechKit](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/concepts/getting-started)
+[Getting Started with Dragon Medical SpeechKit](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/concepts/getting-started)
 
 [Online documentation](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/net-sdk/)
 
