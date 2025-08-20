@@ -24,11 +24,11 @@ namespace S_SpeechAnywhereDocApi
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		// Convenience defines used for opening the ISession instance and pass it the licensing 
-		// information needed. Your partner GUID, organization token and serviceUrl will be made available to you via the 
+		// Your partner GUID, organization token and serviceUrl will be made available to you via the 
 		// Nuance order desk Welcome Kit. 
 		private const string _partnerGuid = "ENTER_YOUR_PARTNER_GUID";
 		private const string _organizationToken = "ENTER_YOUR_ORGANIZATION_TOKEN";
+		//By default connect to US production, can override value.
 		private const string _serviceUrl = "ENTER_SERVICE_URL";
 
 		private VuiController _vuiController;
@@ -45,8 +45,10 @@ namespace S_SpeechAnywhereDocApi
 
 		private void LoginButton_Click(object sender, RoutedEventArgs e)
 		{
-			// We are using region specific url as mentioned above
-			Session.SharedSession.ServiceURL = _serviceUrl;
+			if (_serviceUrl != "ENTER_SERVICE_URL")
+			{
+				Session.SharedSession.ServiceURL = _serviceUrl;
+			}
 			Session.SharedSession.Open(_userName.Text, _organizationToken, _partnerGuid, "S_DM_SpeechKit_DocApi");
 
 			Closing += (_, args) =>

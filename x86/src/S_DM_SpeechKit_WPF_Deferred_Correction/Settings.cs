@@ -6,21 +6,6 @@ namespace S_DM_SpeechKit_WPF_Deferred_Correction
 	public static class Settings
 	{
 		/// <summary>
-		/// Your partner GUID and organization token will be made available to you via the Nuance order desk.
-		/// </summary>
-		public static readonly string OrganizationToken = ConfigurationManager.AppSettings["OrganizationToken"];
-
-		/// <summary>
-		/// Your partner GUID and organization token will be made available to you via the Nuance order desk.
-		/// </summary>
-		public static readonly string PartnerGuid = ConfigurationManager.AppSettings["PartnerGuid"];
-
-		/// <summary>
-		/// URL to speech service.
-		/// </summary>
-		public static readonly string ServiceUrl = ConfigurationManager.AppSettings["ServiceUrl"];
-
-		/// <summary>
 		/// Fields must be loaded with the same field id per document. If you change
 		/// this value remember that documents dictated with another field id name will
 		/// no longer work correctly when opened for correction.

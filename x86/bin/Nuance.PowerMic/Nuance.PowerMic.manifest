@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
-<assemblyIdentity processorArchitecture="x86" version="124.4.324.0" type="win32" name="Nuance.PowerMic"></assemblyIdentity>
+<assemblyIdentity processorArchitecture="x86" version="125.3.82.0" type="win32" name="Nuance.PowerMic"></assemblyIdentity>
 <file name="Pmlog.dll" hashalg="SHA1">
 </file>
 <file name="PowermicHid.dll" hashalg="SHA1">
