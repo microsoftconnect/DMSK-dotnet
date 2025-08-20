@@ -2,6 +2,13 @@
 
 	Private vuiController As Nuance.SpeechAnywhere.WPF.VuiController
 
+	' Your partner GUID, organization token and serviceUrl will be made available to you via the 
+	' Nuance order desk Welcome Kit.
+	Private Const _partnerGuid As String = "ENTER_YOUR_PARTNER_GUID"
+	Private Const _organizationToken As String = "ENTER_YOUR_ORGANIZATION_TOKEN"
+	' By default, connect to US production, can override the value.
+	Private Const _serviceUrl As String = "ENTER_SERVICE_URL"
+
 	Private Sub OpenSessionBtn_Click(sender As Object, e As RoutedEventArgs) Handles OpenSessionBtn.Click
 		REM Disable button - does not make sense to initialize twice
 		OpenSessionBtn.IsEnabled = False
@@ -11,12 +18,15 @@
 		HistoryTBox.Focus()
 
 
-
 		REM Open the session
 		REM TODO: Replace the credentials with the information you received with your Nuance Healthcare Developer registration
 		REM Your partner GUID, organization token and serviceUrl will be made available to you via the Nuance order desk Welcome Kit.
-		Nuance.SpeechAnywhere.Session.SharedSession.ServiceURL = "ENTER_SERVICE_URL"
-		Nuance.SpeechAnywhere.Session.SharedSession.Open(UserNameField.Text, "ENTER_YOUR_ORGANIZATION_TOKEN", "ENTER_YOUR_PARTNER_GUID", "S_DM_SpeechKit_WPF_VBNET")
+
+		If _serviceUrl <> "ENTER_SERVICE_URL" Then
+			Nuance.SpeechAnywhere.Session.SharedSession.ServiceURL = _serviceUrl
+		End If
+
+		Nuance.SpeechAnywhere.Session.SharedSession.Open(UserNameField.Text, _organizationToken, _partnerGuid, "S_DM_SpeechKit_WPF_VBNET")
 
 		REM Create VuiController for this Window
 		vuiController = New Nuance.SpeechAnywhere.WPF.VuiController

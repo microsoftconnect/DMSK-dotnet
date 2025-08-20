@@ -9,11 +9,11 @@ namespace S_DM_SpeechKit_WPF_Deferred_Correction
 	/// </summary>
 	public partial class LoginDialogView : Window
 	{
-		// Convenience defines used for opening the ISession instance and pass it the licensing 
-		// information needed. Your partner GUID, organization token and serviceUrl will be made available to you via the 
+		// Your partner GUID, organization token and serviceUrl will be made available to you via the 
 		// Nuance order desk Welcome Kit. 
 		private const string _partnerGuid = "ENTER_YOUR_PARTNER_GUID";
 		private const string _organizationToken = "ENTER_YOUR_ORGANIZATION_TOKEN";
+		//By default connect to US production, can override value.
 		private const string _serviceUrl = "ENTER_SERVICE_URL";
 
 		public LoginDialogView()
@@ -29,8 +29,10 @@ namespace S_DM_SpeechKit_WPF_Deferred_Correction
 			// Find out the screen size here and position the lower and/or right edge of the speech bar accordingly.
 			SpeechBar.SharedSpeechBar.SetInitialPosition(100, 100, true, true);
 
-			// We need to set the service URL before opening the service.
-			Session.SharedSession.ServiceURL = Settings.ServiceUrl;
+			if (_serviceUrl != "ENTER_SERVICE_URL")
+			{
+				Session.SharedSession.ServiceURL = _serviceUrl;
+			}
 		}
 
 		private void LogonAuthor_Click(object sender, RoutedEventArgs e)
@@ -58,7 +60,7 @@ namespace S_DM_SpeechKit_WPF_Deferred_Correction
 			// Open a new session for the given user. The Session.SharedSession.Close()
 			// method should be called when the application or the "document" is closed
 			// by the user so that server resources can be freed up immediately.
-			Session.SharedSession.Open(TbCorrectionistId.Text, Settings.OrganizationToken, Settings.PartnerGuid, "S_DM_SpeechKit_WPF_Deferred", DocumentMode.Correctionist);
+			Session.SharedSession.Open(TbCorrectionistId.Text, _organizationToken, _partnerGuid, "S_DM_SpeechKit_WPF_Deferred", DocumentMode.Correctionist);
 
 			// For keeping track of the current mode in this sample application.
 			Settings.DocumentMode = DocumentMode.Correctionist;

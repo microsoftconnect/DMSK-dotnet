@@ -14,11 +14,12 @@ namespace S_SpeechAnywhere
 {
 	static class Program
 	{
-		// Convenience defines used for opening the ISession instance and pass it the licensing 
-		// information needed. Your partner GUID, organization token and serviceUrl will be made available to you via the 
+		// Your partner GUID, organization token and serviceUrl will be made available to you via the 
 		// Nuance order desk Welcome Kit. 
 		private const string _partnerGuid = "ENTER_YOUR_PARTNER_GUID";
 		private const string _organizationToken = "ENTER_YOUR_ORGANIZATION_TOKEN";
+
+		//By default connect to US production, can override value. 
 		private const string _serviceUrl = "ENTER_SERVICE_URL";
 
 		/// <summary>
@@ -34,8 +35,11 @@ namespace S_SpeechAnywhere
 			LoginDialog loginDialog = new LoginDialog();
 			if (loginDialog.ShowDialog() != DialogResult.OK)
 				return;
-			// We are using region specific url as mentioned above
-			Session.SharedSession.ServiceURL = _serviceUrl;
+
+			if (_serviceUrl != "ENTER_SERVICE_URL")
+			{
+				Session.SharedSession.ServiceURL = _serviceUrl;
+			}
 			// We will use the user name from the login dialog for licensing information passed to the Dragon Medical SpeechKit SDK. 
 			Session.SharedSession.Open(loginDialog.Username, _organizationToken, _partnerGuid, "S_DM_SpeechKit_Custom");
 
