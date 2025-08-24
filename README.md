@@ -1,5 +1,12 @@
 # Dragon Medical SpeechKit .NET SDK
 Temporary location for .NET SpeechKit package and samples.
+
+## Important Notice
+
+**This repository does not accept pull requests.** For information about pull request policies and document approval workflows, see [PR_APPROVAL_POLICY.md](PR_APPROVAL_POLICY.md).
+
+## Documentation and Resources
+
 See the following pages for more information:
 
 [Setting up Dragon Medical SpeechKit](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/net-sdk/setup)
