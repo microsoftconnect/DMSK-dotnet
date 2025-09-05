@@ -10,7 +10,7 @@ See the following pages for more information:
 
 [End user documentation](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/enduser/end-user-help)
 
-[Release notes for 2024.3.4](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/net-2025.3)
+[Release notes for 2025.3](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/net-2025.3)
 
 [Changes since the last version](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/net-2025.3#solved-in-version-20253-65-r1)
 
