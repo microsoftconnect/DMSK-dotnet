@@ -1,4 +1,5 @@
-﻿using System.Windows;
+using System.Configuration;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -37,11 +38,16 @@ namespace S_SpeechAnywhereWPF
 
 		private void CreateReportButton_Click(object sender, RoutedEventArgs e)
 		{
-			if (_serviceUrl != "ENTER_SERVICE_URL")
+			// Read ServiceUri from app config (injected at test time), fall back to build-time constant
+			var configServiceUrl = ConfigurationManager.AppSettings["ServiceUri"];
+			if (!string.IsNullOrWhiteSpace(configServiceUrl))
 			{
-				Session.SharedSession.ServiceURL = _serviceUrl;
+				Session.SharedSession.ServiceURL = configServiceUrl.Trim();
 			}
-
+			else if (_serviceUrl != "ENTER_SERVICE_URL" && !string.IsNullOrWhiteSpace(_serviceUrl))
+			{
+				Session.SharedSession.ServiceURL = _serviceUrl.Trim();
+			}
 			Session.SharedSession.Open(userTextBox.Text, _organizationToken, _partnerGuid, "S_DM_SpeechKit_WPF");
 			var report = new Report();
 
