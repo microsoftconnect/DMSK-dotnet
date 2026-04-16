@@ -6,7 +6,7 @@
 //
 
 using System;
-using System.Collections.Generic;
+using System.Configuration;
 using System.Windows.Forms;
 using Nuance.SpeechAnywhere;
 
@@ -37,13 +37,25 @@ namespace S_SpeechAnywhere
 			loginDialog.Dispose();
 			if (res == DialogResult.OK)
 			{
-				if (_serviceUrl != "ENTER_SERVICE_URL")
+				// Read ServiceUri from app config (injected at test time), fall back to build-time constant
+				var configServiceUrl = ConfigurationManager.AppSettings["ServiceUri"];
+				if (!string.IsNullOrWhiteSpace(configServiceUrl))
 				{
-					Session.SharedSession.ServiceURL = _serviceUrl;
+					Session.SharedSession.ServiceURL = configServiceUrl.Trim();
+				}
+				else if (_serviceUrl != "ENTER_SERVICE_URL" && !string.IsNullOrWhiteSpace(_serviceUrl))
+				{
+					Session.SharedSession.ServiceURL = _serviceUrl.Trim();
+				}
+				else
+				{
+					MessageBox.Show("ServiceURL is not configured. Set ServiceUri in app.config or replace ENTER_SERVICE_URL.",
+						"Configuration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					return;
 				}
 				// We will use the user name from the login dialog for licensing information passed to the Dragon Medical SpeechKit SDK. 
 				Session.SharedSession.Open(loginDialog.txtUserName.Text, _organizationToken, _partnerGuid,
-					"S_DM_SpeechKit");
+					"S_DM_SpeechKit", DocumentMode.Frontend);
 
 				var createReportWindow = new CreateReport();
 

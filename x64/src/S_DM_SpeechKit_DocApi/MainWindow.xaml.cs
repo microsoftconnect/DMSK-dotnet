@@ -1,8 +1,9 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using Nuance.SpeechAnywhere;
 using Nuance.SpeechAnywhere.WPF;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -45,9 +46,15 @@ namespace S_SpeechAnywhereDocApi
 
 		private void LoginButton_Click(object sender, RoutedEventArgs e)
 		{
-			if (_serviceUrl != "ENTER_SERVICE_URL")
+			// Read ServiceUri from app config (injected at test time), fall back to build-time constant
+			var configServiceUrl = ConfigurationManager.AppSettings["ServiceUri"];
+			if (!string.IsNullOrWhiteSpace(configServiceUrl))
 			{
-				Session.SharedSession.ServiceURL = _serviceUrl;
+				Session.SharedSession.ServiceURL = configServiceUrl.Trim();
+			}
+			else if (_serviceUrl != "ENTER_SERVICE_URL" && !string.IsNullOrWhiteSpace(_serviceUrl))
+			{
+				Session.SharedSession.ServiceURL = _serviceUrl.Trim();
 			}
 			Session.SharedSession.Open(_userName.Text, _organizationToken, _partnerGuid, "S_DM_SpeechKit_DocApi");
 

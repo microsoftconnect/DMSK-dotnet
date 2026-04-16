@@ -1,6 +1,7 @@
-﻿using Nuance.SpeechAnywhere;
-using Nuance.SpeechAnywhere.WPF;
+using System.Configuration;
 using System.Windows;
+using Nuance.SpeechAnywhere;
+using Nuance.SpeechAnywhere.WPF;
 
 namespace S_DM_SpeechKit_WPF_Deferred_Correction
 {
@@ -29,16 +30,20 @@ namespace S_DM_SpeechKit_WPF_Deferred_Correction
 			// Find out the screen size here and position the lower and/or right edge of the speech bar accordingly.
 			SpeechBar.SharedSpeechBar.SetInitialPosition(100, 100, true, true);
 
-			if (_serviceUrl != "ENTER_SERVICE_URL")
+			// Read ServiceUri from app config (injected at test time), fall back to build-time constant
+			var configServiceUrl = ConfigurationManager.AppSettings["ServiceUri"];
+			if (!string.IsNullOrWhiteSpace(configServiceUrl))
 			{
-				Session.SharedSession.ServiceURL = _serviceUrl;
+				Session.SharedSession.ServiceURL = configServiceUrl.Trim();
+			}
+			else if (_serviceUrl != "ENTER_SERVICE_URL" && !string.IsNullOrWhiteSpace(_serviceUrl))
+			{
+				Session.SharedSession.ServiceURL = _serviceUrl.Trim();
 			}
 		}
 
 		private void LogonAuthor_Click(object sender, RoutedEventArgs e)
 		{
-			// We are using region specific url as mentioned above
-			Session.SharedSession.ServiceURL = _serviceUrl;
 			// Open a new session for the given user. The Session.SharedSession.Close()
 			// method should be called when the application or the "document" is closed
 			// by the user so that server resources can be freed up immediately.
@@ -55,8 +60,6 @@ namespace S_DM_SpeechKit_WPF_Deferred_Correction
 
 		private void LogonCorrectionist_Click(object sender, RoutedEventArgs e)
 		{
-			// We are using region specific url as mentioned above
-			Session.SharedSession.ServiceURL = _serviceUrl;
 			// Open a new session for the given user. The Session.SharedSession.Close()
 			// method should be called when the application or the "document" is closed
 			// by the user so that server resources can be freed up immediately.

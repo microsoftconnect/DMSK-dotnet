@@ -22,8 +22,12 @@
 		REM TODO: Replace the credentials with the information you received with your Nuance Healthcare Developer registration
 		REM Your partner GUID, organization token and serviceUrl will be made available to you via the Nuance order desk Welcome Kit.
 
-		If _serviceUrl <> "ENTER_SERVICE_URL" Then
-			Nuance.SpeechAnywhere.Session.SharedSession.ServiceURL = _serviceUrl
+		' Read ServiceUri from app config (injected at test time), fall back to build-time constant
+		Dim configServiceUrl As String = System.Configuration.ConfigurationManager.AppSettings("ServiceUri")
+		If Not String.IsNullOrWhiteSpace(configServiceUrl) Then
+			Nuance.SpeechAnywhere.Session.SharedSession.ServiceURL = configServiceUrl.Trim()
+		ElseIf _serviceUrl <> "ENTER_SERVICE_URL" AndAlso Not String.IsNullOrWhiteSpace(_serviceUrl) Then
+			Nuance.SpeechAnywhere.Session.SharedSession.ServiceURL = _serviceUrl.Trim()
 		End If
 
 		Nuance.SpeechAnywhere.Session.SharedSession.Open(UserNameField.Text, _organizationToken, _partnerGuid, "S_DM_SpeechKit_WPF_VBNET")
