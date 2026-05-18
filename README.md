@@ -10,8 +10,8 @@ See the following pages for more information:
 
 [End user documentation](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/enduser/end-user-help)
 
-[Release notes for 2026.2](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/net-2026.2)
+[Release notes for 2026.2.1](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/net-2026.2.1)
 
-[Changes since the last version](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/net-2026.2#solved-in-version-20262-66-r1)
+Changes since the last version: No functional changes; only the log4net version has been updated.
 
-Version 2026.2 (6.6.2.1)
+Version 2026.2.1 (6.7.15.1)
