@@ -1,0 +1,9 @@
+# Dependabot configuration for Component Governance compliance (S360)
+# Enables dependency scanning for NuGet packages (alerts only, no PRs)
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 0
