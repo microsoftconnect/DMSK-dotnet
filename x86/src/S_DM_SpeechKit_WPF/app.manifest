@@ -21,12 +21,12 @@
   </trustInfo>
   <dependency>
     <dependentAssembly>
-      <assemblyIdentity type="win32" name="Philips.SpeechMike" version="4.7.471.20" processorArchitecture="*" />
+      <assemblyIdentity type="win32" name="Philips.SpeechMike" version="4.9.490.10" processorArchitecture="*" />
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly>
-      <assemblyIdentity type="win32" name="Nuance.PowerMic" version="126.1.185.0" processorArchitecture="*" />
+      <assemblyIdentity type="win32" name="Nuance.PowerMic" version="126.2.265.0" processorArchitecture="*" />
     </dependentAssembly>
   </dependency>
   <asmv3:application xmlns:asmv3="urn:schemas-microsoft-com:asm.v3">
