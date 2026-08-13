@@ -12,4 +12,6 @@ See the following pages for more information:
 
 [Release notes for 2026.3](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/net-2026.3)
 
+[Changes since the last version](https://learn.microsoft.com/en-us/industry/healthcare/speechkit/release-notes/net-2026.3#new-in-version-20263-67-r1)
+
 Version 2026.3 (6.8.1.1)
